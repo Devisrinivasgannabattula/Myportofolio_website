@@ -1,0 +1,408 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: #1d0101;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #6a5acd;
+}
+.typing-effect {
+    font-size: 2rem;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #333;
+    display: inline-block;
+    animation: typing 9s steps(20, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+.typing-effect span {
+    color: #e7e3e0; /* Customize the color of your name */
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    70% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #333;
+    }
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(223, 223, 54, 0.7), rgba(0, 0, 0, 0.7)), url('images/mypicture.jpg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: backgroundMove 15s infinite linear;
+}
+
+@keyframes backgroundMove {
+    0% { background-position: center; }
+    50% { background-position: top; }
+    100% { background-position: center; }
+}
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content button {
+    padding: 0.75rem 1.5rem;
+    background-color: #6a5acd;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hero-content button:hover {
+    transform: scale(1.1);
+}
+/* Sections */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+#about .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size : 30px;
+}
+/* Project Card Styling */
+.project-card {
+    background: #fff;
+    box-shadow: 0px 4px 12px rgba(15, 15, 15, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    width: 80%;
+    max-width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Projects container */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts to screen size */
+    gap: 20px;
+    padding: 20px;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+}
+.project-card a {
+    color: #6a5acd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#skills {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-card img {
+    width: 50px; /* Adjust icon size */
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    color: #666; /* Gray color for description */
+}
+
+
+/* Contact Form */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+
+#contact input, #contact textarea, #contact button {
+    margin: 10px 0;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease;
+}
+
+#contact input:focus, #contact textarea:focus {
+    box-shadow: 0px 4px 8px rgba(106, 90, 205, 0.5);
+    outline: none;
+}
+
+#contact button {
+    background: #6a5acd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contact button:hover {
+    background: #836FFF;
+}
+
+/* Scroll-to-Top Button */
+#scrollToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
+    background-color: #8381ff;
+    color: rgb(217, 224, 232);
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#scrollToTop:hover {
+    background-color: #836FFF;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer a {
+    color: #6a5acd;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* About Me Section */
+#about {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(to right, #e8f0fe, #dfe9ff);
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 1000px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif; /* Change font to Roboto */
+    color: #333; /* Default text color */
+    line-height: 1.6; /* Adjust line height for better readability */
+}
+
+
+/* Download Resume Section */
+#resume {
+    padding: 2rem;
+    text-align: center;
+    background: #f9f9f9;
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Light pattern */
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 600px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Blue background button with white text */
+.blue-button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 10px;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    text-align: center;
+    border-radius: 8px; /* Rounded corners */
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.blue-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Projects Section */
+#projects {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #587ec4, #a1acbc);
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+/* Violet background button with white text */
+/* Yellow background button with white text */
+.yellow-button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 10px;
+    background-color: #ffcc00; /* Yellow background */
+    color: white; /* White text */
+    text-align: center;
+    border-radius: 8px; /* Rounded corners */
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.yellow-button:hover {
+    background-color: #e6b800; /* Darker yellow on hover */
+}
+
+
+/* Skills Section */
+#skills {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #d3cce3, #e9e4f0);
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Certifications Section */
+#certifications {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #ffc5a3, #ffc5a3);
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+#contact {
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #37abc8, #37abc8);
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjusting Form in Contact Section */
+#contact form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Card Styling */
+.project-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    width: 80%;
+    max-width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
