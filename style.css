@@ -92,7 +92,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(rgba(223, 223, 54, 0.7), rgba(0, 0, 0, 0.7)), url('images/Mypicture.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(223, 223, 54, 0.7), rgba(0, 0, 0, 0.7)), url('images/my_picture.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
